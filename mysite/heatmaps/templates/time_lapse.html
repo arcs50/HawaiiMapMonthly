@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}Heatmap Timelapse{% endblock %}
+
+{% block main_body %}
+<div class="text-center">
+    <h1>Earthquake Heatmap Timelapse</h1>
+</div>
+<div>
+    <a href="{% url 'home' month=1 year=2005 %}">month by month</a>
+</div>
+<div class="container">
+    <iframe src="{% static 'Earthquake_Heatmap_With_Time.html' %}" width="100%" height="600" style="border:none;"></iframe>
+</div>
+{% endblock main_body %}
